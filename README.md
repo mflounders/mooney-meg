@@ -6,6 +6,8 @@ Date:       20190228
 Use: 		Flounders et al., 2019, Neural Dynamics of visual ambiguity resolution by perceptual prior
             [https://elifesciences.org/articles/41861]
 
+![elife-41861-fig1-v2.jpg](figs/elife-41861-fig1-v2.jpg)
+
 ## Folder structure:
 ______________________________________________________________________________________________________
 ### /Data: raw and processed mat files for analysis and plotting 
@@ -28,6 +30,7 @@ ________________________________________________________________________________
 ### /Scripts: analysis and plotting scripts 
 All scripts should be run from the base directory
 #### /Scripts/Fig4
+![elife-41861-fig4-v2.jpg](figs/elife-41861-fig4-v2.jpg)
 - Figure 4D) call plotFigure4D to plot existing, processed data
 - Figure 4E) call plotFigure4E 
 - Helper = folder contains the following embedded functions for Fig4, each has a description of inputs/outputs
@@ -37,10 +40,12 @@ All scripts should be run from the base directory
     - RSA_permutation_signrank.m = cluster-based permutation testing using Wilcoxon signrank test
     - temporal_cluster_thresh.m = thresholds statistical clusters based on permuted null-distribution 
 #### /Scripts/Fig5
+![elife-41861-fig5-v2.jpg](figs/elife-41861-fig5-v2.jpg)
 - Figure 5C) call plotFigure5C-ii to plot existing, processed data
 - Figure 5D) call plotFigure5D-ii 
 - *Helper functions identical to Fig4
 #### /Scripts/Fig6 
+![elife-41861-fig6-v2.jpg](figs/elife-41861-fig6-v2.jpg)
 - Figure 6D) call plotFigure6D to plot existing, processed data
 - Figure 6E) call plotFigure6E 
 - Figure 6F) call plotFigure6F_S1 
