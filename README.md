@@ -11,7 +11,8 @@ Use: 		Flounders et al., 2019, Neural Dynamics of visual ambiguity resolution by
 ## Folder structure:
 ______________________________________________________________________________________________________
 ### /Data: raw and processed mat files for analysis and plotting 
-- Framework for a given figure: Raw data (e.g. RDM) --analysis--> permutations and statistics --plotting--> Figure
+- Framework for a given figure: Raw data (e.g. RDM) --_analysis_--> permutations and statistics --_plotting_--> Figure
+
 #### /Data/Raw: includes RDM data for MEG, fMRI, and Models used to generate Figure 4, 5 and 6
 - FMRI_RDM.mat contains two variables
     - FMRI_RDM: image x image x ROI (matrix, 99 x 99 x 20)
@@ -27,10 +28,12 @@ ________________________________________________________________________________
     - megPermutations = permutations x image (matrix, 5000 x 99)
 #### /Data/Processed: includes permutations and statistics for plotting and analysis pipeline steps, data files created using "prepare_" scripts will be saved here for access
 
+
+
 ### /Scripts: analysis and plotting scripts 
 All scripts should be run from the base directory
-#### /Scripts/Fig4
-![elife-41861-fig4-v2.jpg](figs/elife-41861-fig4-v2.jpg)
+
+#### /Scripts/Fig4 (link: [elife-41861-fig4-v2.jpg](figs/elife-41861-fig4-v2.jpg))
 - Figure 4D) call plotFigure4D to plot existing, processed data
 - Figure 4E) call plotFigure4E 
 - Helper = folder contains the following embedded functions for Fig4, each has a description of inputs/outputs
@@ -39,13 +42,11 @@ All scripts should be run from the base directory
     - pear_fisherz.m = transforms pearson R values to Fisher's z values
     - RSA_permutation_signrank.m = cluster-based permutation testing using Wilcoxon signrank test
     - temporal_cluster_thresh.m = thresholds statistical clusters based on permuted null-distribution 
-#### /Scripts/Fig5
-![elife-41861-fig5-v2.jpg](figs/elife-41861-fig5-v2.jpg)
+#### /Scripts/Fig5 (link: [elife-41861-fig5-v2.jpg](figs/elife-41861-fig5-v2.jpg))
 - Figure 5C) call plotFigure5C-ii to plot existing, processed data
 - Figure 5D) call plotFigure5D-ii 
 - *Helper functions identical to Fig4
-#### /Scripts/Fig6 
-![elife-41861-fig6-v2.jpg](figs/elife-41861-fig6-v2.jpg)
+#### /Scripts/Fig6 (link: [elife-41861-fig6-v2.jpg](figs/elife-41861-fig6-v2.jpg))
 - Figure 6D) call plotFigure6D to plot existing, processed data
 - Figure 6E) call plotFigure6E 
 - Figure 6F) call plotFigure6F_S1 
@@ -58,9 +59,9 @@ All scripts should be run from the base directory
     - MEG_Model_Fusion.m and statistics_MEG_Model_Fusion.m = correlates MEG RDMs with the three model RDMs, including row-shuffled MEG RDMs with the three models and computes statistics
     - multiRegressNvar.m = applies multiple regression (spearman)
 #### /Scripts/boundedline
-- boundedline.m = Plot a line with shaded error/confidence bounds
+- boundedline.m = Plot a line with shaded error/confidence bounds 
 - outlinebounds.m =  Outline the patch of a boundedline
-_DISCLAIMER: These functions are third-party plotting tools. They are included as a dependency and the authors do not claim them as their own._
+_DISCLAIMER: These functions are third-party plotting tools. They are included as a dependency and the authors do not claim them as their own. [For Reference, see: Kelly Kearney Github Repo](https://github.com/kakearney/boundedline-pkg)_
 ______________________________________________________________________________________________________
 
 _All figure folders have a prepareFigure[Fig#][FigurePanel].m script. These may be used to step through analysis pipelines
